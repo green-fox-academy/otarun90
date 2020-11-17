@@ -1,0 +1,58 @@
+body {
+    font-family: courier;
+}
+
+main {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+header ul {
+    list-style-type: none;
+    background-color: #614D05;
+    overflow: hidden;
+    color: aliceblue;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: 25px;
+}
+
+
+h5 {
+       padding-bottom: 0;
+}
+
+#first-post {
+    border: 1px solid black;
+    padding: 0 10px 10px 10px;
+    margin: 10px 20px 0 0px;
+}
+
+#second-post {
+    border: 1px solid black;
+    padding: 0 10px 10px 10px;
+    margin: 10px 20px 0 0px;
+}
+
+#content-box {
+    width: 80%;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+  }
+#title-box {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+  }
+
+label {
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: lighter;
+}
