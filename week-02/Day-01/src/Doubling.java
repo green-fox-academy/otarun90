@@ -5,7 +5,7 @@ public class Doubling {
         // masik verzio:
         // int result = number = *2;
         // return result;
-        
+
     }
     public static void main(String[] args) {
         // - Create an integer variable named `baseNum` and assign the value `123` to it
