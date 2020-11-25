@@ -7,7 +7,7 @@ public class triangleMatReview {
 
        public static void mainDraw(Graphics graphics) {
            // Draw a box that has different colored lines on each edge.
-           
+
            graphics.setColor(Color.CYAN);
            graphics.fillPolygon(new int [] {20,700,360}, new int [] {700,700,20},3);
 
