@@ -10,19 +10,13 @@ public class FourRectangles {
         // draw four different size and color rectangles.
         // avoid code duplication.
 
-        //int x1;
-       // int x2;
-        //int x3;
-        //int y1;
-       // int y2;
-        //int y3;
+        Random random = new Random();
 
-
-        Random random = new Random(WIDTH/2);
         for (int i = 0; i < 4 ; i++) {
-            int x = random.nextInt(WIDTH/2);
-            int y = random.nextInt(HEIGHT/2);
-            graphics.setColor(Color.CYAN);
+            int x = random.nextInt(WIDTH-20);
+            int y = random.nextInt(HEIGHT-20);
+            Color color = new Color(random.nextInt(0xFFFFFF));
+            graphics.setColor(color);
             graphics.fillRect(x,y,100,100);
         }
     }
