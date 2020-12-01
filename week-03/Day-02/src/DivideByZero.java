@@ -1,15 +1,16 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class DivideByZero<nrDividedbyTen> {
     private static void randomNumberDividedByTen() {
-        Random random = new Random();
-        int randomNumber = random.nextInt(100);
-        System.out.println("The random number is: " + randomNumber);
-        int nrDividedbyTen = (randomNumber / 10);
-        if (nrDividedbyTen == 0) {
-            System.out.println("fail");
-        } else {
-            System.out.println("Random number divided by ten: " + nrDividedbyTen);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please give value between 1 to 10");
+        int divisor = scanner.nextInt();
+        try {
+        int result = (10 / divisor);
+            System.out.println(result);
+        } catch (ArithmeticException e) {
+            System.out.println("Fail");
         }
     }
 
