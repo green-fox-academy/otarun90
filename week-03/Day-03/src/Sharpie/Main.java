@@ -7,13 +7,7 @@ public class Main {
 
         System.out.println(pen1.inkAmount);
 
-        do {
-            pen1.askToUsePen();
-            pen1.use();
-        } while (pen1.inkAmount>0);
-        pen1.pleaseRefill();
-
-        pen1.chooseToRefill();
+        pen1.game();
 
     }
 }
