@@ -25,9 +25,9 @@ public class Domino implements Comparable<Domino> {
 
     @Override
     public int compareTo(Domino otherDomino){
-        if (this.left < otherDomino.right){
+        if (this.left < otherDomino.left){
             return -1;
-        }else if (this.left > otherDomino.right){
+        }else if (this.left > otherDomino.left){
             return 1;
         } else {
             return 0;
