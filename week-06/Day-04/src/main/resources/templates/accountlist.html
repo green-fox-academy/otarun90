@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>jhjhuuuu
+<body>
+
+<table>
+    <tr th:each="bankAccounts, iter: ${listOfAccounts}">
+        <td th:text="'Index of: ' + ${iter.index+1}"/>
+        <td th:text="${bankAccounts.getName()}"/>
+        <td th:text="${bankAccounts.getBalanceWithDecimalAndCurrency()}"/>
+        <td th:text="${bankAccounts.getAnimalType()}"/>
+    </tr>
+</table>
+
+</body>
+</html>
