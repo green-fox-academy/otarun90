@@ -1,0 +1,106 @@
+body {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+header > h1 {
+    font-weight: lighter;
+}
+
+header > h1, body {
+    color: rgb(3, 204, 229);
+    font-family: 'Roboto', sans-serif
+}
+
+header > hr {
+    border: 2px solid rgb(3, 204, 229);
+}
+
+.buttons {
+    text-align: center;
+    padding: 10px;
+
+}
+
+form{
+
+    display: inline-block;
+
+}
+
+.buttons > form > button {
+    display: inline-block;
+    color: ghostwhite;
+    background-color: rgb(3, 140, 229);
+    border-radius: 30px;
+    border: 0px;
+    padding: 10px;
+}
+
+table {
+    border: 2px solid rgb(3, 140, 229);
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+td, th {
+    width: 200px;
+    length: 100px;
+    /*color: black;*/
+    border: 2px solid rgb(3, 140, 229);
+    border-collapse: collapse;
+}
+
+thead > th {
+    padding: 10px;
+    margin: 10px;
+    color: ghostwhite;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    font-size: x-large;
+    color: ghostwhite;
+    background-color: rgb(3, 140, 229);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(3, 204, 229);
+}
+
+#gif {
+    top:7%;
+    /*bottom: 15%;*/
+    position: absolute;
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-delay: 0s;
+}
+
+@-webkit-keyframes run {
+    0% {
+        left: 0%;
+        transform: rotateY(0deg);
+    }
+    49% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        left: 90%;
+        transform: rotateY(180deg);
+    }
+    99% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        left: 0%;
+        transform: rotateY(0deg);
+    }
+}
+

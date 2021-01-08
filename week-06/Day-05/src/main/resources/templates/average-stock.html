@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Basic Webshop</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+<header>
+
+    <h1><a th:href="@{/}">My Shop</a></h1>
+    <br>
+    <br>
+    <br>
+    <div id="gif">
+        <img class="shape" src="https://i.pinimg.com/originals/1b/11/0a/1b110aba188775ecac41384a43ab2135.gif" width=80px
+             height=auto>
+    </div>
+    <hr>
+</header>
+
+<div class="buttons">
+    <form action="/available" method="get">
+        <button>ONLY AVAILABLE</button>
+    </form>
+    <form action="/sort-by-cheapest" method="get">
+        <button>CHEAPEST PRICE</button>
+    </form>
+    <form action="/contains-nike" method="get">
+        <button>CONTAINS NIKE</button>
+    </form>
+    <form action="/average-stock" method="get">
+        <button>AVERAGE STOCK</button>
+    </form>
+    <form action="/most-expensive-available" method="get">
+        <button>MOST EXPANSIVE AVAILABLE</button>
+    </form>
+</div>
+<div ><p class="search">Search for:</p>
+    <input type="search" id="item-search" name="search-item" placeholder="...something like nike"
+           aria-label="Search through site content">
+    <button id="search-button" >Search</button>
+</div>
+<table>
+    <tr id="average">
+        <th>Average stock: </th>
+        <td th:text="${itemsList}"/>
+    </tr>
+</table>
+</body>
+</html>

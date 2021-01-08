@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+
+</head>
+<body>
+<header>
+
+    <h1><a th:href="@{/}">My Shop</a></h1>
+    <br>
+    <br>
+    <br>
+    <div id="gif">
+        <img class="shape" src="https://i.pinimg.com/originals/1b/11/0a/1b110aba188775ecac41384a43ab2135.gif" width=80px
+             height=auto>
+    </div>
+    <hr>
+</header>
+
+<div class="buttons">
+    <form action="/available" method="get">
+        <button>ONLY AVAILABLE</button>
+    </form>
+    <form action="/sort-by-cheapest" method="get">
+        <button>CHEAPEST PRICE</button>
+    </form>
+    <form action="/contains-nike" method="get">
+        <button>CONTAINS NIKE</button>
+    </form>
+    <form action="/average-stock" method="get">
+        <button>AVERAGE STOCK</button>
+    </form>
+    <form action="/most-expensive-available" method="get">
+        <button>MOST EXPANSIVE AVAILABLE</button>
+    </form>
+</div>
+
+<table>
+    <thead>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Quantity of stock</th>
+    </thead>
+    <tr th:each="items: ${listOfItems}">
+        <td th:text="${items.getName()}"/>
+        <td th:text="${items.getDescription()}"/>
+        <td th:text="${items.getPriceWithDecimalAndCurrency()}"/>
+        <td th:text="${items.getQuantityOfStock()}"/>
+    </tr>
+</table>
+
+<!--<div id="gif">-->
+<!--    <img class="shape" src="https://i.pinimg.com/originals/1b/11/0a/1b110aba188775ecac41384a43ab2135.gif" width=100px height=100px>-->
+<!--</div>-->
+
+
+</body>
+</html>
