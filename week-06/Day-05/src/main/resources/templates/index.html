@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
 
 </head>
-<body>
+<body th:style="'background-image:url(' + @{/image/FamilyGuy_Single_BrianWriter_R7.jpg} + '); background-repeat: no-repeat, repeat; background-size: cover; background-position: center; background-position: 50% 25%;'">
 <header>
 
     <h1><a th:href="@{/}">My Shop</a></h1>
@@ -36,6 +36,13 @@
     </form>
     <form action="/most-expensive-available" method="get">
         <button>MOST EXPANSIVE AVAILABLE</button>
+    </form>
+</div>
+<div class="search">
+    <form action="/search"  method="post">
+        <label for="search">Search for:</label><br>
+        <input type="text"  name="search" id="search" placeholder="...this is not what you are searching for" size="60" height="20px">
+        <button type="submit">Search</button>
     </form>
 </div>
 
