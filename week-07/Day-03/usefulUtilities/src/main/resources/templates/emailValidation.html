@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>E-mail validation</title>
+</head>
+<body>
+<form action="/useful" method="get">
+    <button>Home</button>
+</form>
+<form action="/useful/colored" method="get">
+    <button>Random background generator</button>
+</form>
+
+<form method="get" action="/useful/email">
+    <label for="email"></label>
+    <input type="text" id="email" name="email"/>
+    <a href="/useful/email?email=is@this.valid">example for e-mail validation</a>
+    <button type="submit">Check validity</button>
+</form>
+<!--<body th:style="'color: ' + ${color}">-->
+<p th:text="${message}"/>
+
+</body>
+</html>
