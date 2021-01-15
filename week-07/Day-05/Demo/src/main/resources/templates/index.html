@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/style.css}"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script type="text/javascript" th:src="@{/song.js}"></script>
+</head>
+
+<body th:style="'background-image:url(' + ${backgroundLink} + '); background-repeat: no-repeat, repeat; background-size: 100% auto ;background-position: center;'">
+<h1>Welcome to my page of fantastically useless features!</h1>
+
+<div class="buttons">
+    <form action="/" method="get">
+        <button><i class="fas fa-igloo"></i></button>
+    </form>
+    <form action="/background" method="get">
+        <button>Random background generator</button>
+    </form>
+    <form action="/musiclink" method="get">
+        <button>Random status generator</button>
+    </form>
+</div>
+
+<div class="randomSondAndImageAccordingToStatus">
+    <img id="startOrStopImg" th:src="${imagelink}" alt="Play Button" onclick="play()">
+    <audio id="myAudio" th:src="${musiclink}" preload="auto"></audio>
+</div>
+
+
+<div id="gif">
+    <img class="shape" src="https://i.pinimg.com/originals/1b/11/0a/1b110aba188775ecac41384a43ab2135.gif" width=160px
+         height=auto>
+</div>
+
+</body>
+</html>
